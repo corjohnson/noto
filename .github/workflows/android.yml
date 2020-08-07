@@ -21,7 +21,7 @@ jobs:
         working-directory: Android/
         run: ./gradlew build
 
-  lint & test:
+  lint_test:
     
     runs-on: ubuntu-latest
     
