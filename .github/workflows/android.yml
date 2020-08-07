@@ -18,8 +18,11 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Gradle
+      working-directory: Android/
       run: ./gradlew build
     - name: Lint with Gradle
+      working-directory: Android/
       run: ./gradlew lint
     - name: Test with Gradle
+      working-directory: Android/
       run: ./gradlew test
