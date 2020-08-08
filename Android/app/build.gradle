@@ -24,6 +24,10 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    kotlinOptions {
+        freeCompilerArgs = ["-Xallow-result-return-type", "-Xuse-experimental=kotlin.Experimental"]
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -38,8 +42,11 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.3.1'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.8'
     coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.0.10'
     testImplementation 'junit:junit:4.13'
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.3.8"
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
