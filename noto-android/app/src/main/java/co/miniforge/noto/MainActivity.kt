@@ -1,11 +1,13 @@
 package co.miniforge.noto
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import co.miniforge.noto.data.Note
 import co.miniforge.noto.data.asBundle
+import co.miniforge.noto.notes.view.NoteActivity
 import co.miniforge.noto.util.Toaster
-import co.miniforge.noto.view.ViewNoteFragment
+import co.miniforge.noto.notes.view.ViewNoteFragment
 import java.time.LocalDateTime
 
 import kotlinx.android.synthetic.main.activity_main.*
@@ -34,6 +36,12 @@ class MainActivity : AppCompatActivity() {
             } else {
                 searchForNote(searchText)
             }
+        }
+
+        newNoteBtn.setOnClickListener {
+            val intent = Intent(this, NoteActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent)
         }
     }
 

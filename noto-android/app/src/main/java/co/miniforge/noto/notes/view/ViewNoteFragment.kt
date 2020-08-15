@@ -1,4 +1,4 @@
-package co.miniforge.noto.view
+package co.miniforge.noto.notes.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
